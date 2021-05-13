@@ -1,10 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../conexiondb');
+const path = require('path');
 
-router.get('/register', function(req,res,next) {
-	res.render('registro.html');
+router.get('/login', function(req, res, next){
+	res.sendFile(__dirname + '/register.html');
 });
+
 
 router.post('/register', function(req,res,next){
 	inputData = {
