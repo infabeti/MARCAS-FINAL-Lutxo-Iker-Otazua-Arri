@@ -11,7 +11,49 @@
 <link rel="stylesheet" href="CSS/INICIO.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script>
+  $(document).ready(function(){
+      $(".cargar").click();
+  });
 
+    var map;
+    var long;
+    var lat;
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(initMap);
+      } else { 
+        alert('La geolocalizacion no esta disponible');
+      }
+  }
+    function initMap(position) {
+      map = new google.maps.Map(document.getElementById('embed-responsive'), {
+      center: {lat: position.coords.latitude, lng: position.coords.longitude},
+          zoom: 15,
+        });
+        var presley = new google.maps.Marker({
+          position: {lat: 43.2815433, lng: -2.9652242},
+          map: map,
+      title: 'Bar Presley'
+        });
+
+        var kebab = new google.maps.Marker({
+          position: {lat: 43.2814788, lng: -2.9655318},
+          map: map,
+      title: 'Ttipi Ttapa'
+        });
+        
+        var osasuna = new google.maps.Marker({
+          position: {lat: 43.2809732, lng: -2.9650013},
+          map: map,
+      title: 'Bar Osasuna'
+        });
+      }
+
+      
+  </script>
     
     
     
@@ -146,8 +188,8 @@
               <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
                 <div class="u-container-layout u-container-layout-2">
                   <div class="u-expanded u-grey-10 u-map">
-                    <div class="embed-responsive">
-                      <iframe class="embed-responsive-item" src="//maps.google.com/maps?output=embed&amp;q=San%20Ignacio&amp;t=m" data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNhbiUyMElnbmFjaW8lMjIlMkMlMjJ6b29tJTIyJTNBbnVsbCUyQyUyMnR5cGVJZCUyMiUzQSUyMnJvYWQlMjIlMkMlMjJsYW5nJTIyJTNBbnVsbCUyQyUyMmFwaUtleSUyMiUzQW51bGwlMkMlMjJtYXJrZXJzJTIyJTNBJTVCJTVEJTdE"></iframe>
+                    <div id="embed-responsive" id="embed-responsive">
+                     
                     </div>
                   </div>
                 </div>
@@ -258,5 +300,6 @@
           </div>
         </div>
       </div></footer>
+      <input type="button" class="cargar"  onclick="getLocation()" hidden>
   </body>
 </html>
