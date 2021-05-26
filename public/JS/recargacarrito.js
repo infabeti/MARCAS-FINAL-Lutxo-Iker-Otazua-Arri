@@ -1,5 +1,6 @@
 function CarritoRecarga(){
 	var inserth = document.getElementById('ProductosAnadidos');
+	
 	var OsasunaC = parseInt(localStorage.getItem('osasunaca'));
 	var OsasunaP = parseInt(localStorage.getItem('osasunapa'));
 	var OlivoC = parseInt(localStorage.getItem('olivoca'));
@@ -12,6 +13,14 @@ function CarritoRecarga(){
 	var tipiP = parseInt(localStorage.getItem('tipipa'));
 	var SidreriaC = parseInt(localStorage.getItem('sidreriaca'));
 	var SidreriaP = parseInt(localStorage.getItem('sidreriapa'));
+	
+	var total = OsasunaC + OsasunaP + OlivoC + OlivoP + PresleyP + PresleyC + BerriaC + BerriaP + tipiC + tipiP + SidreriaC + SidreriaP;
+
+	if(total > 0) {
+		inserth.insertAdjacentHTML("afterend",'<th></th><th></th><th></th><th><input type="button" value="Pagar" onclick="Pago()"></th>');
+		inserth.insertAdjacentHTML("afterend",'<th><input type="button" value="Regresar al inicio" onclick="Regreso()"></th><th></th><th>Total(iva incl.)</th><th>' + total + '€</th>');
+
+	}
 
 	if(OsasunaC > 0){
 		inserth.insertAdjacentHTML("afterend",'<th>Cafe </th><th>' + OsasunaC + ' &nbsp;<input type="button" value="-" onclick="restaOC()"> <input type="button" value="+" onclick="sumaOC()"></th><th>Bar Osasuna </th><th>' + OsasunaC + '€</th>');
@@ -61,6 +70,19 @@ function CarritoRecarga(){
 		inserth.insertAdjacentHTML("afterend",'<th>Cafe </th><th>' + SidreriaP + ' &nbsp;<input type="button" value="-" onclick="restaSP()"> <input type="button" value="+" onclick="sumaSP()"></th><th>Sidreria Ander </th><th>' + SidreriaP + '€</th>');
 	}
 
+	if(OsasunaC == 0 && OsasunaP == 0 && OlivoC == 0 && OlivoP == 0 && PresleyP == 0 && PresleyC == 0 && BerriaC == 0 && BerriaP == 0 && tipiC == 0 && tipiP == 0 && SidreriaC == 0 && SidreriaP == 0){
+		inserth.insertAdjacentHTML("afterend",'<th>No hay productos añadidos</th><br><input type="button" value="Regresar a la pagina" onclick="Regreso()">');
+	}
+
+	
+}
+
+function Pago(){
+	window.location.href = 'Pago.html';
+}
+
+function Regreso(){
+	window.location.href = 'INICIO.html';
 }
 
 function restaOC(){

@@ -45,8 +45,23 @@ function check(){
 
     if(userName.value == storedName && userPw.value == storedPw){
         alert('You are logged in.');
-        refrescarLogin();
+        var login = parseInt(localStorage.getItem('login'));
+        login = 1;
+        localStorage.setItem('login',login);
+        window.location.href = 'INICIO.html';
     }else{
         alert('Error on login');
+    }
+}
+
+function lougout(){
+    var login = parseInt(localStorage.getItem('login'));
+    if(login == 1){
+        login = 0;
+        localStorage.setItem('login',login);
+        alert('Te has deslogueado');
+
+    } else {
+        window.location.href = 'Login.html';
     }
 }
