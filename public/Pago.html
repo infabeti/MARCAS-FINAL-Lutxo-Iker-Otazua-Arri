@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Formulario de Tarjeta de Crédito Dinámico</title>
+  <title>Metodo de pago</title>
   <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/Pago.css">
+  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+  <script type="text/javascript" src="js/realizado.js"></script> 
 </head>
 <body>
   <div class="contenedor">
@@ -95,7 +97,7 @@
           <input type="text" id="inputCCV" maxlength="3">
         </div>
       </div>
-      <button type="submit" class="btn-enviar">Enviar</button>
+      <button type="submit" class="btn-enviar" onclick="Realizado()">Enviar</button>
     </form>
   </div>
 
