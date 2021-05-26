@@ -8,17 +8,6 @@ function AnadirCo(){
 	} else {
 		localStorage.setItem('osasunaca', Anadido);
 	}
-/*
-		localStorage.getItem('olivop', olivop);
-		localStorage.getItem('tipic', tipic);
-		localStorage.getItem('tipip', tipip);
-		localStorage.getItem('sidreriac', sidreriac);
-		localStorage.getItem('sidreriap', sidreriap);
-		localStorage.getItem('presleyc', presleyc);
-		localStorage.getItem('presleyp', presleyp);
-		localStorage.getItem('berriac', berriac);
-		localStorage.getItem('berriap', berriap);
-*/
 }
 
 function AnadirPo(){
@@ -41,6 +30,42 @@ function AnadirCbo(){
 	if(Anadido > unidades){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
-		localStorage.setItem('osasunapa', Anadido);
+		localStorage.setItem('olivoca', Anadido);
+	}
+}
+
+function AnadirPbo(){
+	var unidades = parseInt(localStorage.getItem('olivop'));
+	var Anadido = parseInt(localStorage.getItem('olivopa')) + 1;
+
+
+	if(Anadido > unidades){
+		alert('No se puede añadir mas por que no hay stock disponible');
+	} else {
+		localStorage.setItem('olivopa', Anadido);
+	}
+}
+
+function AnadirCt(){
+	var unidades = parseInt(localStorage.getItem('tipic'));
+	var Anadido = parseInt(localStorage.getItem('tipica')) + 1;
+
+
+	if(Anadido > unidades){
+		alert('No se puede añadir mas por que no hay stock disponible');
+	} else {
+		localStorage.setItem('tipica', Anadido);
+	}
+}
+
+function AnadirPt(){
+	var unidades = parseInt(localStorage.getItem('tipip'));
+	var Anadido = parseInt(localStorage.getItem('tipipa')) + 1;
+
+
+	if(Anadido > unidades){
+		alert('No se puede añadir mas por que no hay stock disponible');
+	} else {
+		localStorage.setItem('tipipa', Anadido);
 	}
 }
