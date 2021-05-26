@@ -22,9 +22,23 @@ function CargarVariables(){
 		var berriac = 100;
 		var berriap = 100;
 
+		var osasunaca = 0;
+		var osasunapa = 0;
+		var olivoca = 0;
+		var olivopa = 0;
+		var tipica = 0;
+		var tipipa = 0;
+		var sidreriaca = 0;
+		var sidreriapa = 0;
+		var presleyca = 0;
+		var presleypa = 0;
+		var berriaca = 0;
+		var berriapa = 0;
+
 		var name = "";
 		var pw = "";
 		var login = 0;
+
 		localStorage.setItem('name', name);
 		localStorage.setItem('pw', pw);
 
@@ -41,6 +55,19 @@ function CargarVariables(){
 		localStorage.setItem('berriac', berriac);
 		localStorage.setItem('berriap', berriap);
 		localStorage.setItem('login', login);
+
+		localStorage.setItem('osasunaca', osasunaca);
+		localStorage.setItem('osasunapa', osasunapa);
+		localStorage.setItem('olivoca', olivoca);
+		localStorage.setItem('olivopa', olivopa);
+		localStorage.setItem('tipica', tipica);
+		localStorage.setItem('tipipa', tipipa);
+		localStorage.setItem('sidreriaca', sidreriaca);
+		localStorage.setItem('sidreriapa', sidreriapa);
+		localStorage.setItem('presleyca', presleyca);
+		localStorage.setItem('presleypa', presleypa);
+		localStorage.setItem('berriaca', berriaca);
+		localStorage.setItem('berriapa', berriapa);
 	}
 }
 
@@ -55,3 +82,4 @@ function ValidarLogin() {
 		window.location.href = 'SOBRE-NOSOTROS.html';
 	}
 }
+
