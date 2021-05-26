@@ -47,7 +47,7 @@ function check(){
         alert('You are logged in.');
         var login = parseInt(localStorage.getItem('login'));
         login = 1;
-        localStorage.setItem('login',login);
+        localStorage.setItem('login', login);
         window.location.href = 'INICIO.html';
     }else{
         alert('Error on login');

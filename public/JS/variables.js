@@ -35,12 +35,8 @@ function CargarVariables(){
 		var berriaca = 0;
 		var berriapa = 0;
 
-		var name = "";
-		var pw = "";
-		var login = 1;
+		var login = 0;
 
-		localStorage.setItem('name', name);
-		localStorage.setItem('pw', pw);
 
 		localStorage.setItem('osasunac', osasunac);
 		localStorage.setItem('osasunap', osasunap);
