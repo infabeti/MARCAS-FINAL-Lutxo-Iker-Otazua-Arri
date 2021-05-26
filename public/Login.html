@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Crear cuenta </title>
 	<link rel="stylesheet" type="text/css" href="CSS/login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="JS/login.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".redireccion").click();
+        });
+
+        function Redireccion(){
+            var login = parseInt(localStorage.getItem('login'));
+            if(login == 1){
+                window.location.href = 'INICIO.html';
+            }
+        }
+
+</script>
 </head>
 <body>
 	<div class="login">
@@ -34,7 +48,7 @@
 </div>
 
 <div class="login">
-    <form name='form-login'>
+    <form>
 
         <h1>INICIO DE SESION</h1>
 
@@ -50,10 +64,10 @@
             <label>Recuerdame</label>
         </div>
 
-        <input id= "login_btn" type="submit" value="Inicia" onclick="check()">
+        <input id= "login_btn" type="submit" value="Inicia" onclick="check()" onclick="redireccion()">
 
     </form>
 </div>
-
+<input type="button" class="redireccion" hidden onclick="Redireccion()">
 </body>
 </html>

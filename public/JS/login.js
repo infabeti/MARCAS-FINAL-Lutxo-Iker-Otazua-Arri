@@ -38,19 +38,19 @@ function store(){
 function check(){
     var storedName = localStorage.getItem('name');
     var storedPw = localStorage.getItem('pw');
-
+    var login = parseInt(localStorage.getItem('login'));
     var userName = document.getElementById('userName');
     var userPw = document.getElementById('userPw');
     var userRemember = document.getElementById("rememberMe");
 
     if(userName.value == storedName && userPw.value == storedPw){
         alert('Ya estas logueado');
-        var login = parseInt(localStorage.getItem('login'));
         login = 1;
         localStorage.setItem('login',login);
     }else{
         alert('Error on login');
     }
+    return false;
 }
 
 function lougout(){
