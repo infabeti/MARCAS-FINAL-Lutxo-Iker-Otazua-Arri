@@ -1,0 +1,1 @@
+node app.js watchify public/JS/carrito.js public/JS/login.js public/JS/Pago.js public/JS/realizado.js public/JS/recargacarrito.js public/JS/variables.js -o public/JS/bundle.js
