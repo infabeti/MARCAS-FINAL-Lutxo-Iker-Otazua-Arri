@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname + "/public"),{extensions: ['html']} )
 
 
 app.get('/', (req,res)=>{
-	res.sendFile(path.join(__dirname +'/public/landingPage.html'),function(error){
+	res.sendFile(path.join(__dirname +'/public/INICIO.html'),function(error){
 		if (error) {res.status(404).send("<h2>error 404</h2>");
 	}
 	});

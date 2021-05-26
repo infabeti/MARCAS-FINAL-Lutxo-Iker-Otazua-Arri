@@ -44,11 +44,10 @@ function check(){
     var userRemember = document.getElementById("rememberMe");
 
     if(userName.value == storedName && userPw.value == storedPw){
-        alert('You are logged in.');
+        alert('Ya estas logueado');
         var login = parseInt(localStorage.getItem('login'));
         login = 1;
-        localStorage.setItem('login', login);
-        window.location.href = 'INICIO.html';
+        localStorage.setItem('login',login);
     }else{
         alert('Error on login');
     }
