@@ -83,14 +83,14 @@ function AnadirCs(){
 }
 
 function AnadirPs(){
-	var unidades = parseInt(localStorage.getItem('sidreriac'));
-	var Anadido = parseInt(localStorage.getItem('sidreriaca')) + 1;
+	var unidades = parseInt(localStorage.getItem('sidreriap'));
+	var Anadido = parseInt(localStorage.getItem('sidreriapa')) + 1;
 
 
 	if(Anadido > unidades){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
-		localStorage.setItem('sidreriaca', Anadido);
+		localStorage.setItem('sidreriapa', Anadido);
 	}
 }
 
@@ -107,14 +107,14 @@ function AnadirCp(){
 }
 
 function AnadirPp(){
-	var unidades = parseInt(localStorage.getItem('presleyc'));
-	var Anadido = parseInt(localStorage.getItem('presleyca')) + 1;
+	var unidades = parseInt(localStorage.getItem('presleyp'));
+	var Anadido = parseInt(localStorage.getItem('presleypa')) + 1;
 
 
 	if(Anadido > unidades){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
-		localStorage.setItem('presleyca', Anadido);
+		localStorage.setItem('presleypa', Anadido);
 	}
 }
 
@@ -131,13 +131,13 @@ function AnadirCb(){
 }
 
 function AnadirPb(){
-	var unidades = parseInt(localStorage.getItem('berriac'));
-	var Anadido = parseInt(localStorage.getItem('berriaca')) + 1;
+	var unidades = parseInt(localStorage.getItem('berriap'));
+	var Anadido = parseInt(localStorage.getItem('berriapa')) + 1;
 
 
 	if(Anadido > unidades){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
-		localStorage.setItem('berriaca', Anadido);
+		localStorage.setItem('berriapa', Anadido);
 	}
 }
