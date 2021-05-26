@@ -37,7 +37,7 @@ function CargarVariables(){
 
 		var name = "";
 		var pw = "";
-		var login = 0;
+		var login = 1;
 
 		localStorage.setItem('name', name);
 		localStorage.setItem('pw', pw);
@@ -79,7 +79,7 @@ function ValidarLogin() {
 	if(login == 0 || isNaN(login)){
 		alert('Primero debes loguearte');
 	} else {
-		window.location.href = 'SOBRE-NOSOTROS.html';
+		window.location.href = 'carrito.html';
 	}
 }
 
