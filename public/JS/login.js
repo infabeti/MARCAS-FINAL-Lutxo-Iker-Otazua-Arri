@@ -50,28 +50,3 @@ function check(){
         alert('Error on login');
     }
 }
-
-function isLogged() {
-    if (localStorage.getItem('name') == undefined) {
-        return false;
-    } else {
-        return true;
-    }
-}
-
-function logout() {
-    localStorage.clear();
-    refrescarLogin();
-}
-
-function ocultarAtributo(ide) {
-    if (ide) {
-        ide.setAttribute("hidden", true);
-    }
-}
-
-function mostrarAtributo(ide) {
-    if (ide) {
-        ide.removeAttribute("hidden");
-    }
-}
