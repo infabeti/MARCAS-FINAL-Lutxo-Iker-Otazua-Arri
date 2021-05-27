@@ -7,6 +7,7 @@ function AnadirCo(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('osasunaca', Anadido);
+		CarritoCount();
 	}
 }
 
@@ -19,6 +20,7 @@ function AnadirPo(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('osasunapa', Anadido);
+		CarritoCount();
 	}
 }
 
@@ -31,6 +33,7 @@ function AnadirCbo(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('olivoca', Anadido);
+		CarritoCount();
 	}
 }
 
@@ -43,6 +46,7 @@ function AnadirPbo(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('olivopa', Anadido);
+		CarritoCount();
 	}
 }
 
@@ -55,6 +59,7 @@ function AnadirCt(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('tipica', Anadido);
+		CarritoCount();
 	}
 }
 
@@ -67,6 +72,7 @@ function AnadirPt(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('tipipa', Anadido);
+		CarritoCount();
 	}
 }
 
@@ -79,6 +85,7 @@ function AnadirCs(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('sidreriaca', Anadido);
+		CarritoCount();
 	}
 }
 
@@ -91,6 +98,7 @@ function AnadirPs(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('sidreriapa', Anadido);
+		CarritoCount();
 	}
 }
 
@@ -103,6 +111,7 @@ function AnadirCp(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('presleyca', Anadido);
+		CarritoCount();
 	}
 }
 
@@ -115,6 +124,7 @@ function AnadirPp(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('presleypa', Anadido);
+		CarritoCount();
 	}
 }
 
@@ -127,6 +137,7 @@ function AnadirCb(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('berriaca', Anadido);
+		CarritoCount();
 	}
 }
 
@@ -139,5 +150,25 @@ function AnadirPb(){
 		alert('No se puede añadir mas por que no hay stock disponible');
 	} else {
 		localStorage.setItem('berriapa', Anadido);
+		CarritoCount();
 	}
+}
+
+function CarritoCount(){
+	var OsasunaCa = parseInt(localStorage.getItem('osasunaca'));
+	var OsasunaPa = parseInt(localStorage.getItem('osasunapa'));
+	var OlivoCa = parseInt(localStorage.getItem('olivoca'));
+	var OlivoPa = parseInt(localStorage.getItem('olivopa'));
+	var PresleyPa = parseInt(localStorage.getItem('presleypa'));
+	var PresleyCa = parseInt(localStorage.getItem('presleyca'));
+	var BerriaCa = parseInt(localStorage.getItem('berriaca'));
+	var BerriaPa = parseInt(localStorage.getItem('berriapa'));
+	var tipiCa = parseInt(localStorage.getItem('tipica'));
+	var tipiPa = parseInt(localStorage.getItem('tipipa'));
+	var SidreriaCa = parseInt(localStorage.getItem('sidreriaca'));
+	var SidreriaPa = parseInt(localStorage.getItem('sidreriapa'));
+
+	var total = OsasunaCa + OsasunaPa + OlivoCa + OlivoPa + PresleyPa + PresleyCa + BerriaCa + BerriaPa + tipiCa + tipiPa + SidreriaCa + SidreriaPa;
+
+	document.getElementById('countcart').innerHTML = total;
 }

@@ -7,12 +7,19 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>RESTAURANTES</title>
-    <link rel="stylesheet" href="CSS/nicepage.css" media="screen">
+    <link rel="stylesheet" href="CSS/nav.css" media="screen">
 <link rel="stylesheet" href="CSS/RESTAURANTES.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nav.js" defer=""></script>
    <script type="text/javascript" src="js/variables.js"></script>
    <script type="text/javascript" src="js/login.js"></script> 
+   <script type="text/javascript" src="js/carrito.js"></script> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script>
+  $(document).ready(function(){
+      $(".refreshcart").click();
+  });
+</script>
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -22,6 +29,19 @@
 		"logo": "images/logo.JPG",
 		"sameAs": []
 }</script>
+    <style type="text/css">
+      .chartshop{
+    font-size: 14px;
+    font-weight: 900;
+    position: absolute;
+    z-index: 3;
+    border-radius: 60%;
+    height: 14px;
+    width: 8px;
+    font-size: 20px;
+    color: red;
+}
+    </style>
     <meta property="og:title" content="RESTAURANTES">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#478ac9">
@@ -34,6 +54,7 @@
           <svg class="u-svg-content" viewBox="-1 -1 162 142" x="0px" y="0px" id="svg-860e"><path d="M132,103.9c-2.3-1.1-5.1-1.6-7.6-1.6H50.7L48,86.6h92.8L160,23.4H37.2L33,0H0v11.3h23.3l16.1,93
 	c-9.4,4.7-13.2,15.9-8.7,25.2s16.1,13.1,25.5,8.6c9-4.5,13-15.2,9-24.5h41.9c-4.2,9.5,0.2,20.6,9.8,24.7c9.6,4.1,20.8-0.2,24.9-9.7
 	C146.1,119.2,141.6,108.1,132,103.9z"></path></svg>
+        <span class="chartshop" id="countcart"> 0 </span>
         </div>
         <a href="INICIO.html" data-page-id="51443193" class="u-align-left u-border-2 u-border-grey-75 u-image u-logo u-image-1" data-image-width="399" data-image-height="97" title="Inicio">
           <img src="images/logo.JPG" class="u-logo-image u-logo-image-1" data-image-width="338">
@@ -165,5 +186,6 @@
           </div>
         </div>
       </div></footer>
+      <input type="button" class="refreshcart" onclick="CarritoCount()" hidden>
   </body>
 </html>

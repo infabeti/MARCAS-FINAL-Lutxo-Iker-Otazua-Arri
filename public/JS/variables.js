@@ -78,4 +78,3 @@ function ValidarLogin() {
 		window.location.href = 'carrito.html';
 	}
 }
-

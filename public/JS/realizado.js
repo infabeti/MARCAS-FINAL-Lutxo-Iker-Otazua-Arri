@@ -54,7 +54,7 @@ function Realizado(){
 	 SidreriaCa = 0;
 	 SidreriaPa = 0;
 
-	 localStorage.setItem('osasunaca', OsasunaCa);
+	localStorage.setItem('osasunaca', OsasunaCa);
 	localStorage.setItem('osasunapa', OsasunaPa);
 	localStorage.setItem('olivoca', OlivoCa);
 	localStorage.setItem('olivopa', OlivoPa);
