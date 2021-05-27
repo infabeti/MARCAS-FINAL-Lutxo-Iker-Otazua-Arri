@@ -67,6 +67,15 @@ function Realizado(){
 	localStorage.setItem('sidreriaca', SidreriaCa);
 	localStorage.setItem('sidreriapa', SidreriaPa);
 
-	window.open('INICIO.html');
-	window.close('Pago.html');
+	var x = 1;
+
+	localStorage.setItem('pago', x);
+}
+
+function CierrePago(){
+	var validador = parseInt(localStorage.getItem('pago'));
+
+	if(validador == 1){
+		window.location.href = 'INICIO.html';
+	}
 }

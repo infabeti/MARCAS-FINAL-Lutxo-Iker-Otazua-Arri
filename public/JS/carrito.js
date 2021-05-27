@@ -168,7 +168,15 @@ function CarritoCount(){
 	var SidreriaCa = parseInt(localStorage.getItem('sidreriaca'));
 	var SidreriaPa = parseInt(localStorage.getItem('sidreriapa'));
 
+	var x = 0;
+
+	localStorage.setItem('pago', x);
+
 	var total = OsasunaCa + OsasunaPa + OlivoCa + OlivoPa + PresleyPa + PresleyCa + BerriaCa + BerriaPa + tipiCa + tipiPa + SidreriaCa + SidreriaPa;
 
-	document.getElementById('countcart').innerHTML = total;
+	if(isNaN(total)){
+		document.getElementById('countcart').innerHTML = 0;
+	} else {
+		document.getElementById('countcart').innerHTML = total;
+	}
 }

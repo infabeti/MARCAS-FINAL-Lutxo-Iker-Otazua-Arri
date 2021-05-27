@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="CSS/Pago.css">
   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
   <script type="text/javascript" src="js/realizado.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      $(".pagado").click();
+  });
+</script>
 </head>
 <body>
   <div class="contenedor">
@@ -99,8 +105,8 @@
       </div>
       <button type="submit" class="btn-enviar" onclick="Realizado()">Enviar</button>
     </form>
+    <input type="button" id="pagorealizado" class="pagado" onclick="CierrePago()" hidden>
   </div>
-
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <script src="JS/Pago.js"></script>
 </body>
