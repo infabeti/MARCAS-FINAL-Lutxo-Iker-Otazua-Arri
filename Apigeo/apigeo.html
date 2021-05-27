@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+    <title>Maps JavaScript API</title>
+	<style> 
+  	  #map {
+        width:  720px;
+        height: 500px;
+      }
+	</style> 
+</head>  
+	<body>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+   		$(".cargar").click();
+	});
+
+    var map;
+    var long;
+    var lat;
+    function getLocation() {
+  		if (navigator.geolocation) {
+    		navigator.geolocation.getCurrentPosition(initMap);
+  		} else { 
+    		alert('La geolocalizacion no esta disponible');
+  		}
+	}
+  	function initMap(position) {
+    	map = new google.maps.Map(document.getElementById('map'), {
+		  center: {lat: position.coords.latitude, lng: position.coords.longitude},
+          zoom: 15,
+        });
+        var presley = new google.maps.Marker({
+        	position: {lat: 43.2815433, lng: -2.9652242},
+        	map: map,
+			title: 'Bar Presley'
+        });
+
+        var kebab = new google.maps.Marker({
+        	position: {lat: 43.2814788, lng: -2.9655318},
+        	map: map,
+			title: 'Ttipi Ttapa'
+        });
+      	
+      	var osasuna = new google.maps.Marker({
+        	position: {lat: 43.2809732, lng: -2.9650013},
+        	map: map,
+			title: 'Bar Osasuna'
+        });
+      }
+
+      
+	</script>
+	<p hidden id="cords"></p>
+	<input type="button" class="cargar"  onclick="getLocation()" hidden>
+  <div id="map"></div>
+	</body>
+
+embed-responsive
+
+</html>

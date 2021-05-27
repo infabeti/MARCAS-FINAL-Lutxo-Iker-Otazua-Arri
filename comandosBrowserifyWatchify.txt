@@ -1,0 +1,6 @@
+BROWSERIFY
+browserify  carrito.js login.js Pago.js realizado.js recargacarrito.js variables.js --standalone module > bundle.js
+
+
+WATCHIFY
+node app.js watchify -o public/JS/bundle.js
